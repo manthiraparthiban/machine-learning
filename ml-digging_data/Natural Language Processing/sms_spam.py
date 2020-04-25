@@ -135,7 +135,8 @@ model.fit(X_train, y_train)
 from sklearn.metrics import accuracy_score
 prediction["MultinomialNB"] = model.predict(X_test)
 print('Accuracy: %.2f%%' % (accuracy_score(y_test, prediction["MultinomialNB"]) * 100))
-
+#manual checking
+print(model.predict(vectorizer.transform(['free', 'entry', 'wily', 'come', 'win', 'a', 'cup', 'final', 'this', 'must', 'may', '2005', 'text', 'a', '87121', 'receive', 'entry', 'question', 'st', 'txt', 'rate', 'c', 'apply', '08452810075over18'])))
 # Logistic Regression
 
 from sklearn.linear_model import LogisticRegression
